@@ -27,3 +27,4 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 colorscheme codedark
+au BufNewFile,BufRead *.cuh set filetype=cuda
