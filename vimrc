@@ -14,6 +14,9 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 set autoindent
+set smartindent
+set shiftwidth=2
+set backspace=indent,eol,start
 
 nnoremap j gj
 nnoremap k gk
