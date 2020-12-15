@@ -10,10 +10,12 @@ set clipboard=unnamed
 set cursorline
 set laststatus=2
 
+filetype plugin indent on
 set tabstop=2
 set softtabstop=2
 set expandtab
 set autoindent
+set shiftwidth=2
 set backspace=indent,eol,start
 
 nnoremap j gj
