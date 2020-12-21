@@ -17,18 +17,19 @@ set autoindent
 set smartindent
 set shiftwidth=2
 set backspace=indent,eol,start
+set mouse+=a
 
 nnoremap j gj
 nnoremap k gk
 
 let mapleader=','
-nnoremap <leader>f :115vs<CR><C-w>l:e./<CR>
+nnoremap <leader>f :vs<CR><C-w>l:e./<CR>
 nnoremap <leader>v ggvG$
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-map <C-c> <ESC>
+nnoremap <C-c> <ESC>
 
 colorscheme codedark
 au BufNewFile,BufRead *.cuh set filetype=cuda
