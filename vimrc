@@ -26,6 +26,7 @@ let mapleader=','
 nnoremap <leader>f :vs<CR><C-w>l:e./<CR>
 nnoremap <leader>v ggvG$
 nnoremap <leader>e :vs<CR><C-w>l:e~/.vim/vimrc<CR>
+nnoremap <leader>s :so~/.vim/vimrc<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -34,6 +35,3 @@ nnoremap <C-c> <ESC>
 
 colorscheme codedark
 au BufNewFile,BufRead *.cuh set filetype=cuda
-
-set rtp+=~/.vim/pack/tpope/start/vim-fugitive
-set rtp+=~/.vim/pack/airblade/start/vim-gitgutter
