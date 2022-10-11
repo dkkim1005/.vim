@@ -119,16 +119,13 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " [wilder.nvim]
-" Key bindings can be changed, see below
-call wilder#setup({'modes': [':', '/', '?']})
-
-" Default keys
 call wilder#setup({
       \ 'modes': [':', '/', '?'],
       \ 'next_key': '<Tab>',
       \ 'previous_key': '<S-Tab>',
       \ 'accept_key': '<Down>',
       \ 'reject_key': '<Up>',
+      \ 'enable_cmdline_enter': 0,
       \ })
 
 " 'border'            : 'single', 'double', 'rounded' or 'solid'
