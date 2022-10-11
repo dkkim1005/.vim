@@ -56,6 +56,8 @@ Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 Plug 'vim-airline/vim-airline', {'branch': 'master'}
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/taglist.vim', {'branch': 'master'}
+Plug 'gelguy/wilder.nvim', {'branch': 'master'}
 call plug#end()
 
 
@@ -115,3 +117,27 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+" [wilder.nvim]
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']})
+
+" Default keys
+call wilder#setup({
+      \ 'modes': [':', '/', '?'],
+      \ 'next_key': '<Tab>',
+      \ 'previous_key': '<S-Tab>',
+      \ 'accept_key': '<Down>',
+      \ 'reject_key': '<Up>',
+      \ })
+
+" 'border'            : 'single', 'double', 'rounded' or 'solid'
+"                     : can also be a list of 8 characters,
+"                     : see :h wilder#popupmenu_border_theme() for more details
+" 'highlights.border' : highlight to use for the border`
+call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
+      \ 'highlights': {
+      \   'border': 'normal',
+      \ },
+      \ 'border': 'rounded',
+      \ })))
