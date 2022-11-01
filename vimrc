@@ -37,6 +37,10 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 colorscheme codedark
 au BufNewFile,BufRead *.cuh set filetype=cuda
 
+if executable("cppman")
+    au FileType cpp set keywordprg=cppman
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ----- Settings for 'vim-plug' plugin manager and extensions ----- "
 " Main Commands:
@@ -58,6 +62,7 @@ Plug 'vim-airline/vim-airline', {'branch': 'master'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/taglist.vim', {'branch': 'master'}
 Plug 'gelguy/wilder.nvim', {'branch': 'master'}
+Plug 'airblade/vim-gitgutter', {'branch': 'master'}
 call plug#end()
 
 
@@ -88,26 +93,23 @@ let g:airline#extensions#tabline#formatter = 'jsformatter'
 let g:airline_statusline_ontop=1
 let g:airline_theme='angr'
 
-" air-line
-let g:airline_powerline_fonts = 1
-
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
 " unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline_left_sep = '»'
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '«'
+" let g:airline_right_sep = '◀'
+" let g:airline_symbols.linenr = '␊'
+" let g:airline_symbols.linenr = '␤'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.paste = 'Þ'
+" let g:airline_symbols.paste = '∥'
+" let g:airline_symbols.whitespace = 'Ξ'
 
 " airline symbols
 let g:airline_left_sep = ''
