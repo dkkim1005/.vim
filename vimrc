@@ -17,7 +17,7 @@ set autoindent
 set smartindent
 set shiftwidth=2
 set backspace=indent,eol,start
-set mouse+=a
+set mouse-=a
 
 nnoremap j gj
 nnoremap k gk
@@ -35,3 +35,7 @@ nnoremap <C-c> <ESC>
 
 colorscheme codedark
 au BufNewFile,BufRead *.cuh set filetype=cuda
+
+" cursorline, refer to https://frhyme.github.io/vim/vim08_cursorline
+let &t_SI = "\<ESC>[5 q"
+let &t_EI = "\<ESC>[2 q"
