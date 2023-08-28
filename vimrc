@@ -140,3 +140,7 @@ call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_bo
       \ },
       \ 'border': 'rounded',
       \ })))
+
+" cursorline, refer to https://frhyme.github.io/vim/vim08_cursorline
+let &t_SI = "\<ESC>[5 q"
+let &t_EI = "\<ESC>[2 q"
